@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title>Rent</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content  color="success">
+      <form  #form="ngForm" (ngSubmit)="register(form)">
+        <ion-grid>
+          <ion-row color="primary" justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+              <div text-center>
+                <h3>Pay Your Rent</h3>
+              </div>
+              <div padding>
+                <ion-item>
+                  <ion-input  name="name" type="text" placeholder="Name" ngModel required></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Select Month</ion-label>
+                    <ion-datetime monthValues="1,2,3,4,5,6,7,8,9,10,11,12" yearValues="2019,2020,2021,2022,2023,2024,2025" dayValues="01,02,03,04,05,06,08,09,10, 11, 12, 13, 14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31" displayFormat="DD/MMM/YYYY"></ion-datetime>
+                </ion-item>
+                  <ion-item>
+                      <ion-label>Select Floor</ion-label>
+                      <ion-select placeholder="Select One">
+                        <ion-select-option value="f">1st</ion-select-option>
+                        <ion-select-option value="m">2nd</ion-select-option>
+                        <ion-select-option value="e">3rd</ion-select-option>
+                        <ion-select-option value="w">4th</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Select Room No</ion-label>
+                        <ion-select placeholder="Select One">
+                          <ion-select-option value="f">01</ion-select-option>
+                          <ion-select-option value="m">02</ion-select-option>
+                          <ion-select-option value="e">03</ion-select-option>
+                          <ion-select-option value="w">04</ion-select-option>
+                        </ion-select>
+                      </ion-item>  
+                <ion-item>
+                  <textarea rows="4" cols="50"></textarea>
+                </ion-item>
+                <ion-item>
+                  </ion-item>
+              </div>
+              <div padding>
+                <ion-button  color="dark" size="large" type="submit" [disabled]="form.invalid" expand="block">Submit</ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+    </ion-content>
+  

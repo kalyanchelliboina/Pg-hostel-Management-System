@@ -16,9 +16,44 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Complaint',
+      url: '/complaint',
+      icon: 'color-filter'
+    },
+    {
+      title: 'Locations',
+      url: '/locations',
+      icon: 'pin'
+    },
+    {
+      title: 'Contact Management',
+      url: '/contact-us',
+      icon: 'contacts'
+    },
+    {
+      title: 'Notice Period',
+      url: '/notice-period',
+      icon: 'book'
+    },
+    {
+      title: 'Guest Stay',
+      url: '/guest-stay',
+      icon: 'man'
+    },
+    {
+      title: 'Pay Rent',
+      url: '/rent-payment',
+      icon: 'cash'
+    },
+    {
+      title: 'Room Change',
+      url: '/room-change',
+      icon: 'bed'
+    },
+    {
+      title: 'Login',
+      url: '/login',
+      icon: 'people'
     }
   ];
 

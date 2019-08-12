@@ -1,0 +1,85 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title>Notice Period</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content  color="success">
+      <form  #form="ngForm" (ngSubmit)="register(form)">
+        <ion-grid>
+          <ion-row color="primary" justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+              <div text-center>
+                <h3>Guest Stay</h3>
+              </div>
+              <div padding>
+                <ion-item>
+                  <ion-input  name="name" type="text" placeholder="Name" ngModel required></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Arrival Date</ion-label>
+                        <ion-datetime displayFormat="DDDD MMM D, YYYY" min="2005" max="2016" value="2008-09-02"></ion-datetime>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label>Arrival Time</ion-label>
+                          <ion-datetime displayFormat="HH:mm"></ion-datetime>
+                    </ion-item>
+                <ion-item>
+                    <ion-label>Leaving Date</ion-label>
+                        <ion-datetime displayFormat="DDDD MMM D, YYYY" min="2005" max="2016" value="2008-09-02"></ion-datetime>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label>Leaving Time</ion-label>
+                          <ion-datetime displayFormat="HH:mm"></ion-datetime>
+                    </ion-item>
+                <ion-item>
+                    <ion-label>Relation</ion-label>
+                    <ion-select placeholder="Select One">
+                      <ion-select-option value="f">Family</ion-select-option>
+                      <ion-select-option value="m">Friend</ion-select-option>
+                      <ion-select-option value="e">Others</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label>Select Floor</ion-label>
+                      <ion-select placeholder="Select One">
+                        <ion-select-option value="f">1st</ion-select-option>
+                        <ion-select-option value="m">2nd</ion-select-option>
+                        <ion-select-option value="e">3rd</ion-select-option>
+                        <ion-select-option value="w">4th</ion-select-option>
+                      </ion-select>
+                    </ion-item>  
+                    <ion-item>
+                        <ion-label>Select Room No</ion-label>
+                        <ion-select placeholder="Select One">
+                          <ion-select-option value="f">01</ion-select-option>
+                          <ion-select-option value="m">02</ion-select-option>
+                          <ion-select-option value="e">03</ion-select-option>
+                          <ion-select-option value="w">04</ion-select-option>
+                        </ion-select>
+                      </ion-item> 
+                      <ion-item>
+                          <ion-label>Accommodation Type</ion-label>
+                          <ion-select placeholder="Select One">
+                            <ion-select-option value="f">With Food</ion-select-option>
+                            <ion-select-option value="m">Without Food</ion-select-option>
+                          </ion-select>
+                        </ion-item>   
+                <ion-item>
+                  <textarea rows="4" cols="50"></textarea>
+                </ion-item>
+                <ion-item>
+                  </ion-item>
+              </div>
+              <div padding>
+                <ion-button  color="dark" size="large" type="submit" [disabled]="form.invalid" expand="block">Submit</ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+    </ion-content>
+  
